@@ -26,6 +26,12 @@ hugo new content posts/first-cooking.md
 
 献立を考えた段階と実際に作った結果を区別し、調理時間や食べた量は確認した内容を書いてください。保存方法などの情報には参照先を添えます。
 
+## レシピを編集する
+
+最初の8品のレシピは `content/recipes/` に保存しています。各ページに材料、作り方、保存と温め直し、参考にしたページを記載します。まだ作っていないものは `status: "試作前"` とし、`batch` に仕込み量を記します。分量や手順を変えた場合は、参考にしたレシピからの変更点も末尾に残してください。
+
+`data/dishes.toml` の `recipe` は対応するページのパスです。最初の記事とレシピ一覧は、このデータから同じ8品へのリンクを表示します。リンク先が見つからない場合はビルドが失敗します。共通の保存手順は `content/recipes/_index.md` にまとめています。
+
 ## aboutを更新する
 
 `/about/` は最新の紹介と履歴を表示する入口です。紹介の本文は日付ごとのMarkdownに保存します。最初の紹介は `content/about/2026-09-27.md` で、個別URLは `/about/2026-09-27/` です。
@@ -59,9 +65,10 @@ hugo --gc --minify --panicOnWarning
 | 場所 | 用途 |
 | --- | --- |
 | `content/posts/` | ごはんの記録 |
+| `content/recipes/` | レシピ一覧、最初の8品の材料と作り方 |
 | `content/about/_index.md` | aboutの入口に載せるブログ全体の説明 |
 | `content/about/YYYY-MM-DD.md` | その時点の紹介。古い紹介も保持する |
-| `data/dishes.toml` | 最初の8品の献立案 |
+| `data/dishes.toml` | 最初の8品の献立案とレシピへのリンク |
 | `layouts/` | 表示用テンプレート |
 | `assets/css/main.css` | 配色とレイアウト |
 | `hugo.toml` | タイトル、説明、公開先URLなど |

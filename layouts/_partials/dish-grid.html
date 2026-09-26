@@ -1,0 +1,14 @@
+<div class="dish-grid">
+  {{ range $index, $dish := site.Data.dishes.items }}
+    {{ with site.GetPage $dish.recipe }}
+      <a class="dish-card" href="{{ .RelPermalink }}" aria-label="{{ $dish.name }}のレシピ">
+        <div class="dish-top"><span class="dish-number {{ $dish.color }}">{{ printf "%02d" (add $index 1) }}</span><span class="dish-kind">{{ $dish.kind }}</span></div>
+        <p class="dish-name">{{ $dish.name }}</p>
+        <p class="dish-ingredients">{{ $dish.ingredients }}</p>
+        <span class="dish-recipe-link">レシピを見る <span aria-hidden="true">→</span></span>
+      </a>
+    {{ else }}
+      {{ errorf "Recipe page not found: %s" $dish.recipe }}
+    {{ end }}
+  {{ end }}
+</div>

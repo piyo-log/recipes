@@ -9,7 +9,7 @@
   <link rel="canonical" href="{{ .Permalink }}">
   <meta property="og:title" content="{{ .Title | default site.Title }}">
   <meta property="og:description" content="{{ .Description | default site.Params.description }}">
-  <meta property="og:type" content="{{ if and .IsPage (eq .Section "posts") }}article{{ else }}website{{ end }}">
+  <meta property="og:type" content="{{ if and .IsPage (in (slice "posts" "recipes") .Section) }}article{{ else }}website{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="{{ site.Title }}">
@@ -27,6 +27,7 @@
     </a>
     <nav aria-label="メインメニュー">
       <a href="{{ "posts/" | relURL }}" {{ if eq .Section "posts" }}aria-current="{{ if .IsSection }}page{{ else }}true{{ end }}"{{ end }}>ごはんの記録</a>
+      <a href="{{ "recipes/" | relURL }}" {{ if eq .Section "recipes" }}aria-current="{{ if .IsSection }}page{{ else }}true{{ end }}"{{ end }}>レシピ</a>
       <a href="{{ "about/" | relURL }}" {{ if eq .Section "about" }}aria-current="{{ if .IsSection }}page{{ else }}true{{ end }}"{{ end }}>このログについて</a>
     </nav>
   </header>

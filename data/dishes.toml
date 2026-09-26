@@ -1,47 +1,55 @@
 [[items]]
 name = '鶏と豆腐のつくね'
+recipe = '/recipes/chicken-tofu-tsukune'
 ingredients = '鶏ひき肉・豆腐・玉ねぎ'
 kind = '主菜'
 color = 'orange'
 
 [[items]]
 name = '鮭とキャベツの煮物'
+recipe = '/recipes/salmon-cabbage'
 ingredients = '骨を除いた鮭・キャベツ'
 kind = '主菜'
 color = 'pink'
 
 [[items]]
 name = '豚ひき肉と野菜のトマト煮'
+recipe = '/recipes/pork-vegetable-tomato'
 ingredients = '豚ひき肉・にんじん・なす・トマト'
 kind = '主菜'
 color = 'red'
 
 [[items]]
 name = 'かぼちゃの煮物'
+recipe = '/recipes/simmered-pumpkin'
 ingredients = 'かぼちゃ'
 kind = '副菜'
 color = 'yellow'
 
 [[items]]
 name = 'ブロッコリーのやわらか煮'
+recipe = '/recipes/soft-broccoli'
 ingredients = 'ブロッコリー'
 kind = '副菜'
 color = 'green'
 
 [[items]]
 name = '小松菜と油揚げの煮びたし'
+recipe = '/recipes/komatsuna-aburaage'
 ingredients = '小松菜・油揚げ'
 kind = '副菜'
 color = 'green'
 
 [[items]]
 name = '大根とにんじんのだし煮'
+recipe = '/recipes/daikon-carrot'
 ingredients = '大根・にんじん'
 kind = '副菜'
 color = 'orange'
 
 [[items]]
 name = '野菜のスープ'
+recipe = '/recipes/vegetable-soup'
 ingredients = '玉ねぎ・キャベツ・きのこ'
 kind = '汁物'
 color = 'yellow'
