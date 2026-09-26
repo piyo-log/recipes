@@ -21,9 +21,9 @@
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header shell">
-    <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="ぴよのごはんログ ホーム">
+    <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="{{ site.Title }} ホーム">
       {{ partial "chick.html" . }}
-      <span>ぴよの<span class="brand-light">ごはんログ</span></span>
+      <span>ピヨの<span class="brand-light">ごはんログ</span></span>
     </a>
     <nav aria-label="メインメニュー">
       <a href="{{ "posts/" | relURL }}" {{ if eq .Section "posts" }}aria-current="{{ if .IsSection }}page{{ else }}true{{ end }}"{{ end }}>ごはんの記録</a>
@@ -32,9 +32,9 @@
   </header>
   <main id="main">{{ block "main" . }}{{ end }}</main>
   <footer class="site-footer shell">
-    <div><span class="footer-brand">ぴよのごはんログ</span><p>少しずつ食べて、少しずつ続ける。</p></div>
+    <div><span class="footer-brand">{{ site.Title }}</span><p>少しずつ食べて、少しずつ続ける。</p></div>
     <div class="footer-links"><a href="{{ "about/" | relURL }}">このログについて</a><a href="{{ "index.xml" | relURL }}">RSS <span aria-hidden="true">↗</span></a></div>
-    <small>© {{ now.Year }} Piyo Log</small>
+    <small>© {{ now.Year }} {{ site.Title }}</small>
   </footer>
 </body>
 </html>

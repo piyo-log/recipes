@@ -1,4 +1,4 @@
-# ぴよのごはんログ
+# ピヨのごはんログ
 
 3歳の子どもの晩ごはんを記録するHugoブログです。外部テーマやJavaScriptの依存関係はありません。記事はMarkdownで管理します。
 
@@ -53,7 +53,7 @@ hugo --gc --minify --panicOnWarning
 
 origin は `git@github.com:piyo-log/recipes.git` です。
 
-公開先は [ぴよのごはんログ](https://piyo-log.github.io/recipes/) です。`hugo.toml` の `baseURL` もこのURLに設定しています。
+公開先は [ピヨのごはんログ](https://piyo-log.github.io/recipes/) です。`hugo.toml` の `baseURL` もこのURLに設定しています。
 
 `main` にpushすると、`.github/workflows/pages.yml` がHugoでビルドし、GitHub Pagesへ公開します。下書きの記事（`draft: true`）は公開されません。GitHubのActions画面から「Publish Hugo site」を選び、手動で再実行することもできます。
 
