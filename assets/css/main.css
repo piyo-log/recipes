@@ -153,6 +153,18 @@ h1, h2, h3, p { margin-top: 0; }
 .prose td:first-child { white-space: nowrap; }
 .article-end { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-block: 28px; margin-block: 56px 32px; }
 .article-end > span { font-size: 10px; letter-spacing: .16em; color: var(--muted); }
+.about-page { max-width: 820px; }
+.about-snapshot-note { margin-block: 30px; padding: 22px 25px; border: 1px solid #d9ddcb; background: #f0f2e9; border-radius: 5px; }
+.about-snapshot-note .eyebrow { margin-bottom: 8px; color: var(--green); }
+.about-snapshot-note p { margin-bottom: 10px; font-size: 13px; line-height: 2; }
+.about-history { margin-top: 48px; }
+.about-history h2 { font-family: var(--serif); font-size: 25px; font-weight: 600; margin-bottom: 20px; }
+.about-history ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.about-history li { border-bottom: 1px solid var(--line); }
+.about-history a { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 18px; min-height: 44px; }
+.about-history time { display: block; font-size: 11px; color: var(--muted); letter-spacing: .07em; }
+.about-history-title { font-size: 14px; }
+.about-history-end { display: flex; align-items: center; gap: 16px; }
 .not-found { text-align: center; padding-block: 80px 100px; }
 .not-found .chick { width: 80px; height: 80px; margin-bottom: 25px; }
 .not-found h1 { font-family: var(--serif); font-size: 28px; }
@@ -229,6 +241,9 @@ h1, h2, h3, p { margin-top: 0; }
   .dish-card .dish-ingredients { font-size: 10px; }
   .prose table { min-width: 450px; font-size: 11px; }
   .article-end { margin-top: 38px; }
+  .about-snapshot-note { padding: 18px; }
+  .about-history h2 { font-size: 22px; }
+  .about-history-end { gap: 10px; }
 }
 @media (max-width: 360px) {
   .shell { width: calc(100% - 32px); }

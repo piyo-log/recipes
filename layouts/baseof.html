@@ -27,7 +27,7 @@
     </a>
     <nav aria-label="メインメニュー">
       <a href="{{ "posts/" | relURL }}" {{ if eq .Section "posts" }}aria-current="{{ if .IsSection }}page{{ else }}true{{ end }}"{{ end }}>ごはんの記録</a>
-      <a href="{{ "about/" | relURL }}" {{ if eq .RelPermalink ("about/" | relURL) }}aria-current="page"{{ end }}>このログについて</a>
+      <a href="{{ "about/" | relURL }}" {{ if eq .Section "about" }}aria-current="{{ if .IsSection }}page{{ else }}true{{ end }}"{{ end }}>このログについて</a>
     </nav>
   </header>
   <main id="main">{{ block "main" . }}{{ end }}</main>
