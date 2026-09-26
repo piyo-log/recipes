@@ -84,7 +84,7 @@ draft: false
 
 ## 参考にした資料
 
-保存・食べやすさの注意点は、以下の公的な案内を確認した。献立の品数と組み合わせは、この家庭で試すための計画。
+保存・食べやすさの注意点は、以下の公的な案内を確認した。献立の品数と組み合わせは、わが家で試すために考えた。
 
 - [厚生労働省：家庭での食中毒予防](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/shokuhin/syokuchu/01_00008.html)
 - [米国農務省：Leftovers and Food Safety](https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety)
