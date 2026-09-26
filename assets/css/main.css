@@ -30,7 +30,6 @@ h1, h2, h3, p { margin-top: 0; }
 .eyebrow { font-size: 11px; font-weight: 650; letter-spacing: .18em; margin-bottom: 22px; }
 .sun-dot { display: inline-block; width: 9px; height: 9px; margin-right: 9px; border-radius: 50%; background: var(--yellow); }
 .hero h1 { font-family: var(--serif); font-size: clamp(31px, 3.65vw, 47px); font-weight: 600; line-height: 1.7; letter-spacing: .045em; margin-bottom: 23px; }
-.underline { background: linear-gradient(transparent 77%, #f1de90 77%, #f1de90 94%, transparent 94%); }
 .hero-description { color: var(--muted); font-size: 14px; line-height: 2.25; margin-bottom: 30px; }
 .button { display: inline-flex; align-items: center; gap: 36px; background: var(--ink); color: #fffdf5; border-radius: 4px; padding: 13px 24px; font-size: 13px; font-weight: 550; transition: background .2s; }
 .button:hover { text-decoration: none; background: var(--green); }
