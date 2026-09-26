@@ -1,0 +1,3 @@
+{{ define "main" }}
+<div class="shell archive"><header class="page-heading"><p class="eyebrow">JOURNAL</p><h1>{{ .Title }}</h1><p>{{ .Description }}</p></header>{{ .Content }}{{ range .Pages.ByDate.Reverse }}{{ partial "post-card.html" . }}{{ else }}<p>最初の記録を準備しています。</p>{{ end }}</div>
+{{ end }}

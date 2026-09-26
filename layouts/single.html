@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="article shell">
+  <a class="back-link" href="{{ if eq .Section "posts" }}{{ "posts/" | relURL }}{{ else }}{{ site.Home.RelPermalink }}{{ end }}"><span aria-hidden="true">←</span> {{ if eq .Section "posts" }}ごはんの記録{{ else }}ホーム{{ end }}</a>
+  <header class="article-header">
+    {{ if eq .Section "posts" }}<div class="post-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time><span>{{ .Params.category }}</span>{{ with .Params.status }}<span class="status">{{ . }}</span>{{ end }}</div>{{ else }}<p class="eyebrow">ABOUT THIS LOG</p>{{ end }}
+    <h1>{{ .Title }}</h1><p class="article-description">{{ .Description }}</p>
+  </header>
+  <div class="article-layout">
+    <div class="prose">{{ if eq .Params.status "計画" }}<div class="plan-note"><span class="status">計画</span><p>この記事は、調理・試食する前の献立メモです。作った結果は、これから記録していきます。</p></div>{{ end }}{{ .Content }}</div>
+    {{ if eq .Section "posts" }}<aside class="toc"><p class="eyebrow">この記事の内容</p>{{ .TableOfContents }}<div class="aside-note">少しずつ食べて、<br>少しずつ続ける。{{ partial "chick.html" . }}</div></aside>{{ end }}
+  </div>
+  <div class="article-end"><a class="text-link" href="{{ "posts/" | relURL }}"><span aria-hidden="true">←</span> ごはんの記録へ</a><span>PIYO LOG</span></div>
+</article>
+{{ end }}

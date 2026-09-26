@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="hero shell">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="sun-dot"></span> 3歳からの、晩ごはんの記録</p>
+    <h1>ちいさなごはん、<br>続けるための<span class="underline">記録。</span></h1>
+    <p class="hero-description">いろいろなものを、少しずつ。<br>毎日は作れなくても、無理なくできることから。<br>献立を考えて、作って、振り返るためのログです。</p>
+    {{ with site.GetPage "/posts/starting-with-eight" }}<a class="button" href="{{ .RelPermalink }}">最初の8品を見てみる <span aria-hidden="true">↗</span></a>{{ end }}
+  </div>
+  <div class="meal-note">
+    <div class="note-heading"><span>はじめの献立メモ</span><span class="note-date">2026.09</span></div>
+    <div class="plate" aria-hidden="true"><div class="rice"><i></i><i></i><i></i></div><div class="vegetables"><i></i><i></i><i></i></div><div class="patty"></div><div class="carrot carrot-one"></div><div class="carrot carrot-two"></div></div>
+    <div class="note-bottom"><p>まずは、<strong>8</strong>品から。</p><span>主菜 3 <b>＋</b> 副菜 4 <b>＋</b> 汁物 1</span></div>
+    <span class="note-caption">作り置きと冷凍で、晩ごはんを少し楽に。</span>
+  </div>
+</section>
+<div class="principles shell" aria-label="このログの方針"><span><b>01</b> まずは晩ごはんだけ</span><span><b>02</b> 少しずつ、いろいろ</span><span><b>03</b> 作り置きと冷凍を味方に</span></div>
+<section class="journal shell">
+  <div class="section-heading"><div><p class="eyebrow">JOURNAL</p><h2>ごはんの記録</h2></div><a class="text-link" href="{{ "posts/" | relURL }}">すべての記録 <span aria-hidden="true">→</span></a></div>
+  {{ range first 3 (where site.RegularPages "Section" "posts").ByDate.Reverse }}
+    {{ partial "post-card.html" . }}
+  {{ end }}
+</section>
+<section class="about-strip shell"><div class="about-mark" aria-hidden="true">{{ partial "chick.html" . }}</div><div><h2>うまくいった日も、そうでもない日も。</h2><p>何を作って、どのくらい食べたか。<br>試しながら、わが家の定番を見つけていきます。</p></div><a class="text-link" href="{{ "about/" | relURL }}">このログについて <span aria-hidden="true">→</span></a></section>
+{{ end }}

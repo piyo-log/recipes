@@ -1,0 +1,24 @@
+baseURL = 'https://piyo-log.github.io/recipes/'
+languageCode = 'ja'
+defaultContentLanguage = 'ja'
+hasCJKLanguage = true
+title = 'ぴよのごはんログ'
+enableRobotsTXT = true
+timeZone = 'Asia/Tokyo'
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  description = '3歳の晩ごはんを、少しずつ、無理なく。献立を考え、作って、振り返るための記録。'
+
+[permalinks]
+  posts = '/posts/:slug/'
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 2
+
+[outputs]
+  home = ['HTML', 'RSS']

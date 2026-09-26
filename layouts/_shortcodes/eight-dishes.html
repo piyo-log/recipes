@@ -1,0 +1,1 @@
+<div class="dish-grid">{{ range $index, $dish := site.Data.dishes.items }}<div class="dish-card"><div class="dish-top"><span class="dish-number {{ $dish.color }}">{{ printf "%02d" (add $index 1) }}</span><span class="dish-kind">{{ $dish.kind }}</span></div><p class="dish-name">{{ $dish.name }}</p><p class="dish-ingredients">{{ $dish.ingredients }}</p></div>{{ end }}</div>
