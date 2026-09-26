@@ -23,7 +23,7 @@
   <header class="site-header shell">
     <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="{{ site.Title }} ホーム">
       {{ partial "chick.html" . }}
-      <span>ピヨの<span class="brand-light">ごはんログ</span></span>
+      <span>{{ site.Title }}</span>
     </a>
     <nav aria-label="メインメニュー">
       <a href="{{ "posts/" | relURL }}" {{ if eq .Section "posts" }}aria-current="{{ if .IsSection }}page{{ else }}true{{ end }}"{{ end }}>ごはんの記録</a>

@@ -23,7 +23,6 @@ h1, h2, h3, p { margin-top: 0; }
 .site-header { min-height: 112px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); gap: 24px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; font-size: 19px; font-weight: 750; letter-spacing: .045em; white-space: nowrap; }
 .brand:hover { text-decoration: none; }
-.brand-light { font-weight: 500; }
 .site-header nav { display: flex; gap: 32px; font-size: 13px; }
 .site-header nav a { padding-block: 8px; }
 .site-header nav [aria-current] { text-decoration: underline; text-decoration-color: #b18b10; text-decoration-thickness: 2px; text-underline-offset: 10px; }
