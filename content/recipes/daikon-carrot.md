@@ -3,6 +3,7 @@ title: "大根とにんじんのだし煮"
 date: 2026-09-27T00:00:00+09:00
 description: "大根とにんじんを小さく切って、だしでことこと煮る。しょうゆは香りを添えるくらいに。"
 category: "副菜"
+duration: "約35分"
 status: "試作前"
 batch: "子ども用の小さな副菜約6回分"
 draft: false

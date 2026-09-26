@@ -3,6 +3,7 @@ title: "鮭とキャベツの煮物"
 date: 2026-09-27T00:00:00+09:00
 description: "生鮭とキャベツをだしで煮て、煮汁に少しとろみをつける。"
 category: "主菜"
+duration: "約30分"
 status: "試作前"
 batch: "子ども用の主菜約4回分"
 draft: false

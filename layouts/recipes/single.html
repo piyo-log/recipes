@@ -2,6 +2,7 @@
 <article class="article shell recipe-page">
   <a class="back-link" href="{{ "recipes/" | relURL }}"><span aria-hidden="true">←</span> レシピ一覧</a>
   <header class="article-header">
+    {{ with .Params.duration }}<p class="recipe-time">所要時間の目安：{{ . }}</p>{{ end }}
     <div class="post-meta"><span>{{ .Params.category }}</span>{{ with .Params.status }}<span class="status">{{ . }}</span>{{ end }}<span>作成 <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time></span></div>
     <h1>{{ .Title }}</h1><p class="article-description">{{ .Description }}</p>
     {{ with .Params.batch }}<p class="recipe-batch">仕込み量：{{ . }}</p>{{ end }}

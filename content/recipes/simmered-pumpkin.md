@@ -3,6 +3,7 @@ title: "かぼちゃの煮物"
 date: 2026-09-27T00:00:00+09:00
 description: "かぼちゃの甘みを生かして、砂糖としょうゆは少しだけ。小鉢に少しずつ取り分ける。"
 category: "副菜"
+duration: "約25分"
 status: "試作前"
 batch: "子ども用の小さな副菜約6回分"
 draft: false

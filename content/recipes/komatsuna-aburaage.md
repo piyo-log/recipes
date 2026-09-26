@@ -3,6 +3,7 @@ title: "小松菜と油揚げの煮びたし"
 date: 2026-09-27T00:00:00+09:00
 description: "小松菜を短く切り、油揚げと一緒にだしで煮る。茎から先に入れてやわらかく。"
 category: "副菜"
+duration: "約25分"
 status: "試作前"
 batch: "子ども用の小さな副菜約4回分"
 draft: false

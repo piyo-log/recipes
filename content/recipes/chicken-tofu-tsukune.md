@@ -3,6 +3,7 @@ title: "鶏と豆腐のつくね"
 date: 2026-09-27T00:00:00+09:00
 description: "豆腐と玉ねぎを混ぜて、小さな平たいつくねに。しょうゆのたれを少し絡める。"
 category: "主菜"
+duration: "約35分"
 status: "試作前"
 batch: "小さめ8個・子ども用の主菜約4回分"
 draft: false

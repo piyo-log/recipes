@@ -3,6 +3,7 @@ title: "豚ひき肉と野菜のトマト煮"
 date: 2026-09-27T00:00:00+09:00
 description: "豚ひき肉、にんじん、なす、玉ねぎをトマトで煮込む。ごはんに少しのせても。"
 category: "主菜"
+duration: "約40分"
 status: "試作前"
 batch: "子ども用の主菜約4回分"
 draft: false

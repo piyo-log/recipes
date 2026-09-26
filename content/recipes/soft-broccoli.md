@@ -3,6 +3,7 @@ title: "ブロッコリーのやわらか煮"
 date: 2026-09-27T00:00:00+09:00
 description: "ブロッコリーを少なめのだしで蒸し煮にする。茎も薄く切って、やわらかく。"
 category: "副菜"
+duration: "約20分"
 status: "試作前"
 batch: "子ども用の小さな副菜約5回分"
 draft: false

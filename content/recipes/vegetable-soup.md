@@ -3,6 +3,7 @@ title: "野菜のスープ"
 date: 2026-09-27T00:00:00+09:00
 description: "玉ねぎ、キャベツ、きのこのスープ。ほかのおかずと一緒に、少量ずつ温める。"
 category: "汁物"
+duration: "約30分"
 status: "試作前"
 batch: "子ども用の小さな汁椀約5回分"
 draft: false

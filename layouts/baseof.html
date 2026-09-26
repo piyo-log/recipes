@@ -27,7 +27,7 @@
     </a>
     <nav aria-label="メインメニュー">
       <a href="{{ "posts/" | relURL }}" {{ if eq .Section "posts" }}aria-current="{{ if .IsSection }}page{{ else }}true{{ end }}"{{ end }}>ごはんの記録</a>
-      <a href="{{ "recipes/" | relURL }}" {{ if eq .Section "recipes" }}aria-current="{{ if .IsSection }}page{{ else }}true{{ end }}"{{ end }}>レシピ</a>
+      <a href="{{ "recipes/" | relURL }}" {{ if or (eq .Section "recipes") (eq .Layout "shopping-list") }}aria-current="{{ if .IsSection }}page{{ else }}true{{ end }}"{{ end }}>レシピ</a>
       <a href="{{ "about/" | relURL }}" {{ if eq .Section "about" }}aria-current="{{ if .IsSection }}page{{ else }}true{{ end }}"{{ end }}>このログについて</a>
     </nav>
   </header>

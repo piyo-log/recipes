@@ -142,8 +142,9 @@ h1, h2, h3, p { margin-top: 0; }
 .dish-recipe-link span { font-size: 17px; }
 .recipe-index { max-width: 820px; }
 .recipe-batch { display: inline-block; margin: 20px 0 0; padding: 7px 13px; background: #eeeee4; border-radius: 4px; font-size: 12px; }
-.recipe-page .prose table { min-width: 0; }
-.recipe-page .prose td:first-child { white-space: normal; }
+.recipe-time { color: var(--green); font-size: 14px; margin-bottom: 15px; }
+.recipe-page .prose table, .shopping-page .prose table { min-width: 0; }
+.recipe-page .prose td:first-child, .shopping-page .prose td:first-child { white-space: normal; }
 .dish-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
 .dish-number { width: 31px; height: 31px; border-radius: 50%; font-size: 12px; font-family: Georgia, serif; display: grid; place-items: center; background: #eee1bb; }
 .dish-number.orange { background: #f3ddc5; }
