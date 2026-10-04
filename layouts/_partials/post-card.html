@@ -9,7 +9,7 @@
       <div class="prose entry-body">{{ .Content | replaceRE ` id="([^"]+)"` (printf ` id="%s-$1"` .File.ContentBaseName) | replaceRE `href="#([^"]*)"` (printf `href="%s#$1"` .RelPermalink) | replaceRE "<h2([^>]*)>" "<h3$1>" | replaceRE "</h2>" "</h3>" | safeHTML }}</div>
     {{ else }}
       <p class="entry-summary">{{ .Description }}</p>
+      <a class="entry-open" href="{{ .RelPermalink }}">{{ if eq .Params.status "計画" }}献立メモを開く{{ else }}記録を開く{{ end }}</a>
     {{ end }}
-    <a class="entry-open" href="{{ .RelPermalink }}">{{ if eq .Params.status "計画" }}献立メモを開く{{ else }}記録を開く{{ end }}</a>
   </div>
 </article>
