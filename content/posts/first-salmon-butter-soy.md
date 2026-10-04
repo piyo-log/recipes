@@ -8,7 +8,9 @@ status: "記録"
 draft: false
 ---
 
-[鮭・じゃがいも・キャベツのバターしょうゆ焼き]({{< relref "/recipes/salmon-potato-cabbage-butter-soy" >}})を作ってみた。
+[最初の8品]({{< relref "/posts/starting-with-eight" >}})では、[鮭とキャベツの煮物]({{< relref "/recipes/salmon-cabbage" >}})を候補にしていた。
+
+でも、ピヨちゃんには煮るより焼く方が合いそうな気がしたので、今回は[鮭・じゃがいも・キャベツのバターしょうゆ焼き]({{< relref "/recipes/salmon-potato-cabbage-butter-soy" >}})を作ってみた。
 
 ## 作ってみて
 
