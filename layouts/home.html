@@ -3,7 +3,7 @@
   <section class="journal" aria-labelledby="journal-heading">
     <header class="journal-heading"><h1 id="journal-heading">ごはんの記録</h1></header>
     {{ range first 6 (where site.RegularPages "Section" "posts").ByDate.Reverse }}
-      {{ partial "post-card.html" . }}
+      {{ partial "post-card.html" (dict "page" . "excerptOnly" true) }}
     {{ else }}<p>最初の記録を準備しています。</p>{{ end }}
     <a class="archive-link" href="{{ "posts/" | relURL }}">これまでの記録をすべて見る</a>
   </section>

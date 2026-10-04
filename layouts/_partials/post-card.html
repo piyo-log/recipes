@@ -1,3 +1,5 @@
+{{ $excerptOnly := .excerptOnly }}
+{{ with .page }}
 <article class="journal-entry">
   <div class="entry-date">
     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
@@ -5,7 +7,7 @@
   </div>
   <div class="entry-content">
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    {{ if and (eq .Params.status "記録") (lt (len .Plain) 900) }}
+    {{ if and (not $excerptOnly) (eq .Params.status "記録") (lt (len .Plain) 900) }}
       <div class="prose entry-body">{{ .Content | replaceRE ` id="([^"]+)"` (printf ` id="%s-$1"` .File.ContentBaseName) | replaceRE `href="#([^"]*)"` (printf `href="%s#$1"` .RelPermalink) | replaceRE "<h2([^>]*)>" "<h3$1>" | replaceRE "</h2>" "</h3>" | safeHTML }}</div>
     {{ else }}
       <p class="entry-summary">{{ .Description }}</p>
@@ -13,3 +15,4 @@
     {{ end }}
   </div>
 </article>
+{{ end }}

@@ -2,6 +2,6 @@
 <div class="shell archive journal-archive">
   <header class="page-heading"><h1>{{ .Title }}</h1></header>
   {{ .Content }}
-  {{ range .RegularPages.ByDate.Reverse }}{{ partial "post-card.html" . }}{{ else }}<p>最初の記録を準備しています。</p>{{ end }}
+  {{ range .RegularPages.ByDate.Reverse }}{{ partial "post-card.html" (dict "page" . "excerptOnly" false) }}{{ else }}<p>最初の記録を準備しています。</p>{{ end }}
 </div>
 {{ end }}
