@@ -3,7 +3,6 @@
 <article class="article shell about-page">
   <a class="back-link" href="{{ site.Home.RelPermalink }}"><span aria-hidden="true">←</span> ホーム</a>
   <header class="article-header">
-    <p class="eyebrow">ABOUT THIS LOG</p>
     <h1>{{ .Title }}</h1>
     <p class="article-description">{{ .Description }}</p>
   </header>
@@ -11,7 +10,7 @@
   {{ range first 1 $versions }}
   <section aria-label="最新の紹介">
     <div class="about-snapshot-note">
-      <p class="eyebrow">最新の紹介</p>
+      <p class="section-label">最新の紹介</p>
       <p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time>時点の記録です。</p>
       <a class="text-link" href="{{ .RelPermalink }}">この紹介の個別ページ <span aria-hidden="true">→</span></a>
     </div>

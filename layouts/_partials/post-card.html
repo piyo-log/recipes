@@ -1,4 +1,15 @@
-<article class="post-card">
-  <a class="post-art" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">{{ if eq .Slug "starting-with-eight" }}<span class="art-kicker">はじめての作り置き</span><span class="art-number">8<span>品</span></span><span class="art-bottom">主菜3 ＋ 副菜4 ＋ 汁物1</span>{{ else }}<span class="art-kicker">{{ site.Title }}</span>{{ partial "chick.html" . }}<span class="art-bottom">{{ .Date.Format "2006.01.02" }}</span>{{ end }}</a>
-  <div class="post-card-content"><div class="post-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time><span>{{ .Params.category | default "ごはんの記録" }}</span>{{ with .Params.status }}<span class="status">{{ . }}</span>{{ end }}</div><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p>{{ .Description }}</p><a class="text-link" href="{{ .RelPermalink }}">記録を読む <span aria-hidden="true">→</span></a></div>
+<article class="journal-entry">
+  <div class="entry-date">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+    <span>{{ .Params.category | default "ごはんの記録" }}</span>
+  </div>
+  <div class="entry-content">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{ if and (eq .Params.status "記録") (lt (len .Plain) 900) }}
+      <div class="prose entry-body">{{ .Content | replaceRE ` id="([^"]+)"` (printf ` id="%s-$1"` .File.ContentBaseName) | replaceRE `href="#([^"]*)"` (printf `href="%s#$1"` .RelPermalink) | replaceRE "<h2([^>]*)>" "<h3$1>" | replaceRE "</h2>" "</h3>" | safeHTML }}</div>
+    {{ else }}
+      <p class="entry-summary">{{ .Description }}</p>
+    {{ end }}
+    <a class="entry-open" href="{{ .RelPermalink }}">{{ if eq .Params.status "計画" }}献立メモを開く{{ else }}記録を開く{{ end }}</a>
+  </div>
 </article>

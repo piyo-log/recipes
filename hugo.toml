@@ -8,7 +8,7 @@ timeZone = 'Asia/Tokyo'
 disableKinds = ['taxonomy', 'term']
 
 [params]
-  description = '子どものごはんを、少しずつ、無理なく。献立を考え、作って、振り返るための記録。'
+  description = '子どもの晩ごはんの調理記録とレシピ。作った料理、食べた様子、次に変えたいことを残しています。'
 
 [permalinks]
   posts = '/posts/:slug/'
