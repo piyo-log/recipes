@@ -1,6 +1,29 @@
 {{ define "main" }}
 <div class="shell archive recipe-index">
   <header class="page-heading"><p class="eyebrow">RECIPES</p><h1>{{ .Title }}</h1><p>{{ .Description }}</p></header>
-  <div class="prose">{{ .Content }}</div>
+  {{ $groups := slice }}
+  {{ $categories := slice "主菜" "副菜" "汁物" }}
+  {{ range $categories }}
+    {{ $pages := where $.RegularPages "Params.category" . }}
+    {{ if $pages }}{{ $groups = $groups | append (dict "name" . "id" (. | anchorize) "pages" $pages.ByDate.Reverse) }}{{ end }}
+  {{ end }}
+  {{ range .RegularPages.GroupByParam "category" }}
+    {{ if not (in $categories .Key) }}
+      {{ $name := .Key | default "その他" }}
+      {{ $groups = $groups | append (dict "name" $name "id" ($name | anchorize) "pages" .Pages.ByDate.Reverse) }}
+    {{ end }}
+  {{ end }}
+  <nav class="recipe-categories" aria-label="料理の種類から探す">
+    {{ range $groups }}<a href="#{{ .id }}">{{ .name }}<span>{{ len .pages }}品</span></a>{{ end }}
+  </nav>
+  {{ range $groups }}
+    <section class="recipe-group" aria-labelledby="{{ .id }}">
+      <h2 id="{{ .id }}">{{ .name }}<span>{{ len .pages }}品</span></h2>
+      <div class="recipe-grid">
+        {{ range .pages }}{{ partial "recipe-card.html" . }}{{ end }}
+      </div>
+    </section>
+  {{ end }}
+  <div class="prose recipe-notes">{{ .Content }}</div>
 </div>
 {{ end }}

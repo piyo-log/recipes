@@ -1,0 +1,10 @@
+<a class="recipe-card" href="{{ .RelPermalink }}" aria-labelledby="recipe-{{ .File.ContentBaseName }}">
+  <div class="recipe-card-meta">
+    {{ with .Params.duration }}<span class="recipe-card-time">所要時間の目安：{{ . }}</span>{{ end }}
+    {{ with .Params.status }}<span class="status">{{ . }}</span>{{ end }}
+  </div>
+  <h3 id="recipe-{{ .File.ContentBaseName }}">{{ .Title }}</h3>
+  <p class="recipe-card-description">{{ .Description }}</p>
+  {{ with .Params.batch }}<p class="recipe-card-batch">仕込み量：{{ . }}</p>{{ end }}
+  <span class="recipe-card-link">レシピを見る<span aria-hidden="true">→</span></span>
+</a>
